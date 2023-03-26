@@ -1,4 +1,5 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
+import {API_URL} from '../envs/books.json';
 
 export const fetchBooks = createAsyncThunk('fetchBooks', async () => {
   const res = await fetch(
@@ -21,8 +22,7 @@ export const fetchBooks = createAsyncThunk('fetchBooks', async () => {
 });
 
 export const searchBooks = createAsyncThunk('searchBooks', async searchText => {
-  const url =
-    'https://openlibrary.org/search.json?title=' + searchText + '&page=1';
+  const url = API_URL + '/search.json?title=' + searchText + '&page=1';
   const res = await fetch(url);
   const final = await res.json();
   const array = final?.docs;

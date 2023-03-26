@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {Root} from './src/configurations/Root';
+import {Root} from './App/configurations/Root';
 
 export default class App extends Component {
   render() {

@@ -3,17 +3,17 @@ import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     height: 375,
-    width: 200,
+    width: 375,
     padding: 0,
   },
   image: {
-    height: 200,
-    width: 200,
+    height: 375,
+    width: 375,
     position: 'absolute',
   },
   placeHolderimage: {
-    height: 200,
-    width: 200,
+    height: 375,
+    width: 375,
   },
   title: {
     position: 'absolute',
