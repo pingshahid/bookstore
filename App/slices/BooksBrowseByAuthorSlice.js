@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {fetchBooksByAuthor} from '../api/books';
 
-const BooksSlice = createSlice({
+const BooksBrowseByAuthorSlice = createSlice({
   name: 'author_books',
   initialState: {
     data: [],
@@ -23,4 +23,4 @@ const BooksSlice = createSlice({
   },
 });
 
-export default BooksSlice.reducer;
+export default BooksBrowseByAuthorSlice.reducer;

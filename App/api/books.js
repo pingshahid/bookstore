@@ -53,3 +53,24 @@ export const searchBooks = createAsyncThunk('searchBooks', async searchText => {
   });
   return parsedArray;
 });
+
+export const browseBookByName = createAsyncThunk(
+  'browseBookByName',
+  async searchText => {
+    const url = API_URL + '/search.json?title=' + searchText + '&page=1';
+    const res = await fetch(url);
+    const final = await res.json();
+    const array = final?.docs;
+    const parsedArray = [];
+    array.forEach(element => {
+      parsedArray.push({
+        key: element?.key,
+        title: element?.title,
+        isbn: element?.isbn?.[0],
+        author_key: element?.author_key?.[0],
+        author_name: element?.author_name?.[0],
+      });
+    });
+    return parsedArray;
+  },
+);

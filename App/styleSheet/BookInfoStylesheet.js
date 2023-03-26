@@ -2,19 +2,19 @@ import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    height: 375,
+    height: 200,
     width: 375,
     padding: 0,
     alignItems: 'center',
     justifyContent: 'center',
   },
   image: {
-    height: 375,
+    height: 200,
     width: 375,
     position: 'absolute',
   },
   placeHolderimage: {
-    height: 375,
+    height: 200,
     width: 375,
   },
   title: {

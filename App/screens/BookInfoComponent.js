@@ -15,7 +15,7 @@ const BookInfoComponent = props => {
   );
 
   const navigateToDetailsScreen = useCallback(() => {
-    navigation?.navigation.navigate('Book Details', {
+    navigation?.navigation?.navigate('Book Details', {
       book: book,
     });
   }, [navigation, book]);
