@@ -1,7 +1,7 @@
 import {Text, View} from 'react-native';
 import React, {useEffect, useMemo, useState} from 'react';
 import FastImage from 'react-native-fast-image';
-import {styles} from './BookInfoStylesheet';
+import {styles} from '../styleSheet/BookInfoStylesheet';
 
 const BookDetailsScreenComponent = props => {
   const {book} = props?.route?.params;

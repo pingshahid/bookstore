@@ -4,7 +4,7 @@ import React from 'react';
 import {SafeAreaView} from 'react-native';
 import {store} from './store';
 import AppNavigator from './AppNavigator';
-import {styles} from '../screens/BookInfoStylesheet';
+import {styles} from '../styleSheet/BookInfoStylesheet';
 
 export const Root = () => {
   return (

@@ -1,7 +1,7 @@
 import React, {useCallback, useMemo} from 'react';
 
 import {View, Text, Pressable} from 'react-native';
-import {styles} from './BookInfoStylesheet';
+import {styles} from '../styleSheet/BookInfoStylesheet';
 import FastImage from 'react-native-fast-image';
 
 const BookInfoComponent = props => {

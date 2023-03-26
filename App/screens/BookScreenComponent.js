@@ -7,13 +7,11 @@ import Carousel from 'react-native-reanimated-carousel';
 import BookInfoComponent from './BookInfoComponent';
 
 const BookScreenComponent = navigation => {
-  console.log('sssddd');
   const dispatch = useDispatch();
   const books = useSelector(state => state.book_search);
   const [search] = useState(null);
 
   const onTextChange = event => {
-    console.log('event.nativeEvent.text', event.nativeEvent.text);
     dispatch(searchBooks(event.nativeEvent.text));
   };
 
