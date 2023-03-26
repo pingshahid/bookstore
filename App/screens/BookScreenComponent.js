@@ -6,7 +6,8 @@ import {SearchBar} from 'react-native-elements';
 import Carousel from 'react-native-reanimated-carousel';
 import BookInfoComponent from './BookInfoComponent';
 
-const BookDetailsScreen = () => {
+const BookScreenComponent = navigation => {
+  console.log('sssddd');
   const dispatch = useDispatch();
   const books = useSelector(state => state.book_search);
   const [search] = useState(null);
@@ -14,18 +15,18 @@ const BookDetailsScreen = () => {
   const onTextChange = event => {
     console.log('event.nativeEvent.text', event.nativeEvent.text);
     dispatch(searchBooks(event.nativeEvent.text));
-    // callback(event.nativeEvent.text);
   };
 
   useEffect(() => {
-    console.log('useEffectddd')
+    console.log('useEffect');
+    // dispatch(fetchBooks());
   }, []);
   // console.log(JSON.stringify(books));
 
   return (
     <View>
       <SearchBar
-        placeholder="Search Books details"
+        placeholder="Search Books"
         onEndEditing={onTextChange}
         value={search}
       />
@@ -40,7 +41,10 @@ const BookDetailsScreen = () => {
           scrollAnimationDuration={1000}
           onSnapToItem={index => console.log('current index:', index)}
           renderItem={({index}) => (
-            <BookInfoComponent book={books?.data[index]} />
+            <BookInfoComponent
+              book={books?.data[index]}
+              navigation={navigation}
+            />
           )}
         />
       )}
@@ -48,4 +52,4 @@ const BookDetailsScreen = () => {
   );
 };
 
-export default BookDetailsScreen;
+export default BookScreenComponent;

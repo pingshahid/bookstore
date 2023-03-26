@@ -5,6 +5,8 @@ export const styles = StyleSheet.create({
     height: 375,
     width: 375,
     padding: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   image: {
     height: 375,
@@ -25,5 +27,8 @@ export const styles = StyleSheet.create({
     backgroundColor: 'orange',
     borderRadius: 20,
     padding: 5,
+  },
+  rootStyle: {
+    flex: 1,
   },
 });

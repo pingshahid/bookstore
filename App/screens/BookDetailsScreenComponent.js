@@ -1,24 +1,23 @@
-import React, {useCallback, useMemo} from 'react';
-
-import {View, Text, Pressable} from 'react-native';
-import {styles} from './BookInfoStylesheet';
+import {Text, View} from 'react-native';
+import React, {useEffect, useMemo, useState} from 'react';
 import FastImage from 'react-native-fast-image';
+import {styles} from './BookInfoStylesheet';
 
-const BookInfoComponent = props => {
-  const {book, navigation} = props;
+const BookDetailsScreenComponent = props => {
+  const {book} = props?.route?.params;
+  console.log('book', book);
   const url = useMemo(
     () => 'https://covers.openlibrary.org/b/isbn/' + book.isbn + '-L.jpg',
     [],
   );
-  const navigateToDetailsScreen = useCallback(() => {
-    navigation?.navigation.navigate('Book Details', {
-      book: book,
-    });
-  }, [navigation, book]);
 
-  console.log('url', url);
+  useEffect(() => {
+    console.log('useEffectddd');
+  }, []);
+  // console.log(JSON.stringify(books));
+
   return (
-    <Pressable onPress={() => navigateToDetailsScreen()}>
+    <View>
       <View style={styles.container}>
         <View>
           <FastImage
@@ -38,8 +37,8 @@ const BookInfoComponent = props => {
           {book.title || 'Not found'}
         </Text>
       </View>
-    </Pressable>
+    </View>
   );
 };
 
-export default BookInfoComponent;
+export default BookDetailsScreenComponent;
