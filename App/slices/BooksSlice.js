@@ -1,22 +1,22 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {fetchBooks} from '../api/books';
+import {fetchBooksByAuthor} from '../api/books';
 
 const BooksSlice = createSlice({
-  name: 'books',
+  name: 'author_books',
   initialState: {
-    data: null,
+    data: [],
     isLoader: false,
     isError: false,
   },
   extraReducers: builder => {
-    builder.addCase(fetchBooks.pending, (state, action) => {
+    builder.addCase(fetchBooksByAuthor.pending, (state, action) => {
       state.isLoader = true;
     });
-    builder.addCase(fetchBooks.fulfilled, (state, action) => {
+    builder.addCase(fetchBooksByAuthor.fulfilled, (state, action) => {
       state.isLoader = false;
       state.data = action.payload;
     });
-    builder.addCase(fetchBooks.rejected, (state, action) => {
+    builder.addCase(fetchBooksByAuthor.rejected, (state, action) => {
       state.isLoader = false;
       state.isError = true;
     });

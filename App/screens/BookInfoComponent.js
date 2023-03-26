@@ -7,16 +7,19 @@ import FastImage from 'react-native-fast-image';
 const BookInfoComponent = props => {
   const {book, navigation} = props;
   const url = useMemo(
-    () => 'https://covers.openlibrary.org/b/isbn/' + book.isbn + '-L.jpg',
-    [],
+    () =>
+      book.isbn
+        ? 'https://covers.openlibrary.org/b/isbn/' + book.isbn + '-L.jpg'
+        : 'https://covers.openlibrary.org/b/id/' + book.id + '-L.jpg',
+    [book],
   );
+
   const navigateToDetailsScreen = useCallback(() => {
     navigation?.navigation.navigate('Book Details', {
       book: book,
     });
   }, [navigation, book]);
 
-  console.log('url', url);
   return (
     <Pressable onPress={() => navigateToDetailsScreen()}>
       <View style={styles.container}>
@@ -30,7 +33,6 @@ const BookInfoComponent = props => {
             style={styles.image}
             source={{
               uri: url,
-              cache: FastImage.cacheControl.cacheOnly,
             }}
           />
         </View>

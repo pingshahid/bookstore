@@ -1,3 +1,5 @@
 {
-  "API_URL": "https://openlibrary.org/"
+  "API_URL": "https://openlibrary.org/",
+  "AUTHOR_ID": "OL23919A"
+  
 }

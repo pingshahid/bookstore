@@ -7,7 +7,6 @@ import BookScreenComponent from '../screens/BookScreenComponent';
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
-  console.log('AppNavigator');
   return (
     <NavigationContainer>
       <Stack.Navigator>
