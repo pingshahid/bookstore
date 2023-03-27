@@ -69,7 +69,11 @@ run npm i in root folder
 run bundle exec pod install inside ios folder
 install app using xcode or from react-native start ios
  
- 
+# Highlevel diagram of implementation
+
+<img width="363" alt="Screenshot 2023-03-27 at 5 08 03 PM" src="https://user-images.githubusercontent.com/9390068/227930985-f7499188-9d92-4e74-bd48-b2525cbb27c9.png">
+
+
 
 
 
