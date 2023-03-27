@@ -20,7 +20,7 @@ The app should have the following features
 
 4. View details of a book (including a picture of the cover)
 
-#Assumption
+# Assumption
 
 For browse books through a paginated view by name, i have used the https://openlibrary.org/dev/docs/api/search api and passing the title name from env file which can be change from evn file
 
