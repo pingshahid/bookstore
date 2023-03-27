@@ -31,4 +31,5 @@ export const styles = StyleSheet.create({
   rootStyle: {
     flex: 1,
   },
+  alingCenter: {alignItems: 'center'},
 });

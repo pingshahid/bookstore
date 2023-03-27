@@ -3,6 +3,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {fetchAuthorDetails, fetchBooksByAuthor} from '../api/books';
 import BookCommonCarouselComponent from './BookCommonCarouselComponent';
+import {styles} from '../styleSheet/BookInfoStylesheet';
 
 const BookScreenBrowseByAuthorComponent = navigation => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const BookScreenBrowseByAuthorComponent = navigation => {
       {books?.isLoader ? (
         <ActivityIndicator animating={books?.isLoader} color="black" />
       ) : (
-        <View style={{alignItems: 'center'}}>
+        <View style={styles.alingCenter}>
           <View>
             <Text>Browse book by author {author?.data?.name}</Text>
           </View>

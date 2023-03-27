@@ -22,23 +22,25 @@ const BookInfoComponent = props => {
 
   return (
     <Pressable onPress={() => navigateToDetailsScreen()}>
-      <View style={styles.container}>
-        <View>
-          <FastImage
-            source={require('../../assets/placeholder.png')}
-            style={styles.placeHolderimage}
-          />
+      <View style={styles.alingCenter}>
+        <View style={styles.container}>
+          <View>
+            <FastImage
+              source={require('../../assets/placeholder.png')}
+              style={styles.placeHolderimage}
+            />
 
-          <FastImage
-            style={styles.image}
-            source={{
-              uri: url,
-            }}
-          />
+            <FastImage
+              style={styles.image}
+              source={{
+                uri: url,
+              }}
+            />
+          </View>
+          <Text style={styles.title} numberOfLines={1} ellipsizeMode={'tail'}>
+            {book.title || 'Not found'}
+          </Text>
         </View>
-        <Text style={styles.title} numberOfLines={1} ellipsizeMode={'tail'}>
-          {book.title || 'Not found'}
-        </Text>
       </View>
     </Pressable>
   );

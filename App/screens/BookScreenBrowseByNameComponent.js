@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {browseBookByName} from '../api/books';
 import {BOOKS_TITLE} from '../envs/books.json';
 import BookCommonCarouselComponent from './BookCommonCarouselComponent';
+import {styles} from '../styleSheet/BookInfoStylesheet';
 
 const BookScreenBrowseByNameComponent = navigation => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const BookScreenBrowseByNameComponent = navigation => {
       {books?.isLoader ? (
         <ActivityIndicator animating={books?.isLoader} color="black" />
       ) : (
-        <View style={{alignItems: 'center'}}>
+        <View style={styles.alingCenter}>
           <View>
             <Text>Browse book by name {BOOKS_TITLE}</Text>
           </View>
